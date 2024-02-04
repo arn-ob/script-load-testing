@@ -1,0 +1,9 @@
+./k6 run --logformat raw specs/login.js --console-output=./rawOutputs/loginRAW.csv
+./k6 run 
+
+
+cat scripts.txt | parallel ./k6 run {}
+
+cat scripts.txt | parallel ./k6 run --logformat raw {} --console-output=./rawOutputs/aaaaRAW.csv
+
+./k6 run --logformat raw specs/signup.js --console-output=./rawOutputs/signupRAW.csv
