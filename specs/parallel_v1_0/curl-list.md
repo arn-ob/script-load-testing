@@ -41,6 +41,7 @@ curl 'https://stage-api.10minuteschool.net/k12-course-service/api/v1/programs?ty
   --compressed
 
 
+
 curl 'https://stage-api.10minuteschool.net/k12-course-service/api/v1/programs?batch_id=201' \
   -H 'sec-ch-ua: "Not A(Brand";v="99", "Google Chrome";v="121", "Chromium";v="121"' \
   -H 'Accept: application/json, text/plain, */*' \
