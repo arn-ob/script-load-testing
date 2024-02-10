@@ -6,11 +6,11 @@ import papaparse from 'https://jslib.k6.io/papaparse/5.1.1/index.js';
 
 let lengthMinus = 10;
 
-const userExistsFailedFilePath = './specs/parallel_v1_0/v1/userExistsFailed_v1.csv';
-const userExistSuccessFilePath = './specs/parallel_v1_0/v1/userExistSuccess_v1.csv';
+const userExistsFailedFilePath = './specs/testing_v1/v1/userExistsFailed_v1.csv';
+const userExistSuccessFilePath = './specs/testing_v1/v1/userExistSuccess_v1.csv';
 
-const loginFailedFilePath = './specs/parallel_v1_0/v1/loginFailed.csv';
-const loginSuccessFilePath = './specs/parallel_v1_0/v1/loginSuccess.csv';
+const loginFailedFilePath = './specs/testing_v1/v1/loginFailed.csv';
+const loginSuccessFilePath = './specs/testing_v1/v1/loginSuccess.csv';
 
 const csvData = open('../../logsCSV/signup/signupSuccess2.csv');
 const loginData = papaparse.parse(csvData).data;

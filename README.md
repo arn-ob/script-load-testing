@@ -10,8 +10,8 @@
 
 ```bash
 export GOROOT="/usr/local/go"
-export GOPATH="$HOME/Documents/yourProjectName”
-export PATH="$HOME/Documents/yourProjectName/bin:$PATH"
+export GOPATH="$HOME/script-load-testing"
+export PATH="$HOME/script-load-testing/bin:$PATH"
 ```
 
 > Reload/source Then .zshrc

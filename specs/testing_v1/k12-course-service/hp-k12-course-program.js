@@ -3,7 +3,7 @@ import { check, sleep } from 'k6';
 
 //Define the stages for the test
 export let options = {
-    vus: 5000,
+    vus: 20000,
     duration: '50s',
 };
 
@@ -25,6 +25,8 @@ export default function () {
         check(res, {
             'status is 200': (r) => r.status === 200,
             'status is 502': (r) => r.status === 502,
+            'status is 503': (r) => r.status === 503,
+            'status is 500': (r) => r.status === 500,
             'response time > 200ms': (r) => r.timings.duration > 100,
             // 'response time < 100ms': (r) => r.timings.duration < 100,
             // 'response time < 200ms': (r) => r.timings.duration < 200,

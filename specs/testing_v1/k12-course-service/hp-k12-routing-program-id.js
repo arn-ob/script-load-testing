@@ -3,8 +3,8 @@ import { check, sleep } from 'k6';
 
 //Define the stages for the test
 export let options = {
-    vus: 2000,
-    duration: '20s',
+    vus: 10000,
+    duration: '50s',
 };
 
 // Set the base URL of the API
@@ -25,6 +25,7 @@ export default function () {
         check(res, {
             'status is 200': (r) => r.status === 200,
             'status is 502': (r) => r.status === 502,
+            'status is 521': (r) => r.status === 521,
             'response time > 200ms': (r) => r.timings.duration > 100,
             'response time < 100ms': (r) => r.timings.duration < 100,
             'response time < 200ms': (r) => r.timings.duration < 200,
