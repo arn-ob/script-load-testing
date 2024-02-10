@@ -38,11 +38,9 @@ export default function () {
         });
 
         if (res.status !== 200) {
-            console.log("Login Failed API Response: " + res.body);
+            console.log("Login Failed API Response: " + res.status);
         }
-        else if (logresinRes.status === 200) {
-            console.log("Login Success API Response: " + res.body);
-        }
+       
 
         sleep(1);
 }

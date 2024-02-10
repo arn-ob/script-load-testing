@@ -1,14 +1,14 @@
 import http from 'k6/http';
 import { check, sleep } from 'k6';
-import file from 'k6/x/file';
-import papaparse from 'https://jslib.k6.io/papaparse/5.1.1/index.js';
+// import file from 'k6/x/file';
+// import papaparse from 'https://jslib.k6.io/papaparse/5.1.1/index.js';
 
 
 //Define the stages for the test
 export let options = {
-    iterations: 10,
-    vus: 10,
-    duration: '10s',
+    // iterations: 1,
+    vus: 10000,
+    duration: '50s',
 };
 
 const result = './specs/parallel_v1_0/homepage/result.csv';
@@ -24,19 +24,18 @@ export default function () {
 
         check(loginRes, {
             'status is 200': (r) => r.status === 200,
+            'status is 502': (r) => r.status === 502,
+            'status is 520': (r) => r.status === 520,
             'response time < 1000ms': (r) => r.timings.duration < 1000
         });
 
         if (loginRes.status !== 200) {
-            file.appendString(failedResult, `Failed Login API Response,${JSON.stringify(loginRes.status)}\n`)
-            console.log("Login Failed API Response: " + loginRes.body);
+            // file.appendString(failedResult, `Failed Login API Response,${JSON.stringify(loginRes.status)}\n`)
+            console.log("Login Failed API Response: " + loginRes.status);
         }
-        else if (loginRes.status === 200) {
-            file.appendString(result, `Successful:${JSON.stringify(loginRes.status)}\n`)
-            console.log("Login Success API Response: " + loginRes.body);
-        }
+    
 
-        sleep(1);
+        sleep(2);
 }
 
 

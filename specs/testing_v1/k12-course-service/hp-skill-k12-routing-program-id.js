@@ -4,7 +4,7 @@ import { check, sleep } from 'k6';
 //Define the stages for the test
 export let options = {
     vus: 2000,
-    duration: '10s',
+    duration: '20s',
 };
 
 // Set the base URL of the API
@@ -24,6 +24,7 @@ export default function () {
 
         check(res, {
             'status is 200': (r) => r.status === 200,
+            'status is 502': (r) => r.status === 502,
             'response time > 200ms': (r) => r.timings.duration > 100,
             'response time < 100ms': (r) => r.timings.duration < 100,
             'response time < 200ms': (r) => r.timings.duration < 200,
@@ -38,11 +39,9 @@ export default function () {
         });
 
         if (res.status !== 200) {
-            console.log("Login Failed API Response: " + res.body);
+            console.log("Login Failed API Response: " + res.status);
         }
-        else if (logresinRes.status === 200) {
-            console.log("Login Success API Response: " + res.body);
-        }
+        
 
         sleep(1);
 }

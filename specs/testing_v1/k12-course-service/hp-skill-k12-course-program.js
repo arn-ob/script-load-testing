@@ -3,8 +3,8 @@ import { check, sleep } from 'k6';
 
 //Define the stages for the test
 export let options = {
-    vus: 2000,
-    duration: '10s',
+    vus: 5000,
+    duration: '50s',
 };
 
 // Set the base URL of the API
@@ -24,26 +24,24 @@ export default function () {
 
         check(res, {
             'status is 200': (r) => r.status === 200,
+            'status is 502': (r) => r.status === 502,
             'response time > 200ms': (r) => r.timings.duration > 100,
-            'response time < 100ms': (r) => r.timings.duration < 100,
-            'response time < 200ms': (r) => r.timings.duration < 200,
-            'response time < 500ms': (r) => r.timings.duration < 500,
-            'response time < 800ms': (r) => r.timings.duration < 800,
-            'response time < 1000ms': (r) => r.timings.duration < 1000,
-            'response time < 1200ms': (r) => r.timings.duration < 1200,
-            'response time < 1500ms': (r) => r.timings.duration < 1500,
-            'response time < 2000ms': (r) => r.timings.duration < 2000,
-            'response time < 2200ms': (r) => r.timings.duration < 2200,
-            'response time < 2500ms': (r) => r.timings.duration < 2500,
+            // 'response time < 100ms': (r) => r.timings.duration < 100,
+            // 'response time < 200ms': (r) => r.timings.duration < 200,
+            // 'response time < 500ms': (r) => r.timings.duration < 500,
+            // 'response time < 800ms': (r) => r.timings.duration < 800,
+            // 'response time < 1000ms': (r) => r.timings.duration < 1000,
+            // 'response time < 1200ms': (r) => r.timings.duration < 1200,
+            // 'response time < 1500ms': (r) => r.timings.duration < 1500,
+            // 'response time < 2000ms': (r) => r.timings.duration < 2000,
+            // 'response time < 2200ms': (r) => r.timings.duration < 2200,
+            // 'response time < 2500ms': (r) => r.timings.duration < 2500,
         });
 
         if (res.status !== 200) {
-            console.log("Login Failed API Response: " + res.body);
+            console.log("Login Failed API Response: " + res.status);
         }
-        else if (logresinRes.status === 200) {
-            console.log("Login Success API Response: " + res.body);
-        }
-
+       
         sleep(1);
 }
 
