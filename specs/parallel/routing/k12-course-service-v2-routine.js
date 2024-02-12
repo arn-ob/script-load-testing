@@ -31,9 +31,9 @@ export default function () {
             'response time > 200ms': (r) => r.timings.duration > 100,
         });
 
-        // if (res.status !== 200) {
-        //     console.log("Login Failed API Response: " + res.status);
-        // }
+        if (res.status !== 200) {
+            console.log("k12-course/api/v2/routine > Status: " + res.status);
+        }
        
 
         sleep(1);
