@@ -28,7 +28,7 @@ export default function () {
             'status is 503': (r) => r.status === 503,
             'status is 500': (r) => r.status === 500,
             'status is 520': (r) => r.status === 520,
-            'response time > 200ms': (r) => r.timings.duration > 100,
+            'response time < 600ms': (r) => r.timings.duration < 600,
         });
 
         if (res.status !== 200) {
