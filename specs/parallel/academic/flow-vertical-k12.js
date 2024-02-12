@@ -5,8 +5,8 @@ import { check, sleep } from 'k6';
 
 // Define the stages for the test
 export let options = {
-    vus: 10000,
-    duration: '50s',
+    vus: 15000,
+    duration: '15s',
 };
 
 

@@ -3,8 +3,8 @@ import { check, sleep } from 'k6';
 
 //Define the stages for the test
 export let options = {
-    vus: 25000,
-    duration: '30s',
+    vus: 20000,
+    duration: '20s',
 };
 
 // Set the base URL of the API

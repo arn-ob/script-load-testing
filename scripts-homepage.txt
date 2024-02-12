@@ -2,5 +2,3 @@ specs/parallel/homepage/discovery-service-tax-skill.js
 specs/parallel/homepage/discovery-tax-products-admission.js
 specs/parallel/homepage/discovery-tax-products-job.js
 specs/parallel/homepage/discovery-tax-products-skill.js
-specs/parallel/homepage/page-builder-query.js
-
