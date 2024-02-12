@@ -33,9 +33,9 @@ export default function () {
             'response time > 200ms': (r) => r.timings.duration > 100,
         });
 
-        // if (res.status !== 200) {
-        //     console.log("catalog-service/api/v2/products/english-for-professionals-course/lx-details > Status : " + res.status);
-        // }
+        if (res.status !== 200) {
+            console.log("catalog-service/api/v2/products/english-for-professionals-course/lx-details > Status : " + res.status);
+        }
 
         sleep(1);
 }
