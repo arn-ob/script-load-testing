@@ -1,0 +1,9 @@
+specs/parallel/academic/catalog-service-v2-renewal-message.js
+specs/parallel/academic/discovery-tax-vertical-admission.js
+specs/parallel/academic/discovery-tax-vertical-k12.js
+specs/parallel/academic/flow-vertical-k12.js
+specs/parallel/academic/k12-course-catalogs-product.js
+specs/parallel/academic/k12-routing-program-id.js
+specs/parallel/academic/my-enrolments-platform-k12.js
+specs/parallel/academic/notice-indent-segment-101.js
+specs/parallel/academic/notices-indent-segment-142.js

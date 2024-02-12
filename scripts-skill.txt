@@ -1,0 +1,8 @@
+specs/parallel/skill/cart-service-carts.js
+specs/parallel/skill/catalog-service-recommendations.js
+specs/parallel/skill/discovery-product-variants.js
+specs/parallel/skill/discovery-program-bundle-items.js
+specs/parallel/skill/discovery-program-free-product.js
+specs/parallel/skill/hp-skill-skill-courses-syllabus.js
+specs/parallel/skill/my-enrolments-platform-skill.js
+specs/parallel/skill/skillup-courses-process.js

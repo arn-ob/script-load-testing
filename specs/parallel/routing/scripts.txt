@@ -1,2 +1,0 @@
-./specs/parallel/routing/routing-custom-list.js
-./specs/parallel/routing/k12-course-service-v2-routine.js
