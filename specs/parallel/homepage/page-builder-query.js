@@ -32,7 +32,7 @@ export default function () {
         });
 
         if (res.status !== 200) {
-            console.log("Login Failed API Response: " + res.status);
+            console.log("page-builder-service/query Status: " + res.status);
         }
 
         sleep(1);

@@ -32,7 +32,7 @@ export default function () {
         });
 
         if (res.status !== 200) {
-            console.log("Login Failed API Response: " + res.body);
+            console.log("discovery-service/api/v1/taxonomies/products?vertical=admission Status: " + res.status);
         }
 
         sleep(1);
