@@ -3,7 +3,7 @@ import { check, sleep } from 'k6';
 
 //Define the stages for the test
 export let options = {
-    vus: 5000,
+    vus: 10000,
     duration: '10s',
 };
 
@@ -35,7 +35,7 @@ export default function () {
         });
 
         if (res.status !== 200) {
-            console.log("Login Failed API Response: " + res.status);
+            console.log("enrolment-service/api/v1/my-enrolments?platform=skill&segment_id=101 Status " + res.status);
         }
        
 

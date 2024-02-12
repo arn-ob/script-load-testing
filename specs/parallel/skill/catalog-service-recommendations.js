@@ -34,7 +34,7 @@ export default function () {
         });
 
         if (res.status !== 200) {
-            console.log("Login Failed API Response: " + res.status);
+            console.log("catalog-service/api/v2/recommendations?context_identification_id > status " + res.status);
         }
        
 

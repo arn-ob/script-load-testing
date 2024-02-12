@@ -34,7 +34,7 @@ export default function () {
         });
 
         if (res.status !== 200) {
-            console.log("Login Failed API Response: " + res.status);
+            console.log("skillup-service/api/v4/courses/progress > Status " + res.status);
         }
 
         sleep(1);

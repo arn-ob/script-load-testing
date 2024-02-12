@@ -1,4 +1,3 @@
-specs/parallel/skill/cart-service-carts.js
 specs/parallel/skill/catalog-service-recommendations.js
 specs/parallel/skill/discovery-product-variants.js
 specs/parallel/skill/discovery-program-bundle-items.js
