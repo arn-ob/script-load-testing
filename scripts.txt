@@ -1,8 +1,2 @@
-specs/signup.js
-specs/login.js
-specs/validate.js
-specs/comment.js
-specs/conversation.js
-specs/liveclass.js
-specs/conversation.js
-specs/k12enroll.js
+specs/parallel/routing/routing-custom-list.js
+specs/parallel/routing/k12-course-service-v2-routine.js
