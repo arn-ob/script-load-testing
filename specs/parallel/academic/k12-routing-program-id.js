@@ -22,25 +22,19 @@ export default function () {
             headers: headers
         });
 
-        check(res, {
+        check(loginRes, {
             'status is 200': (r) => r.status === 200,
             'status is 502': (r) => r.status === 502,
+            'status is 503': (r) => r.status === 503,
+            'status is 500': (r) => r.status === 500,
+            'status is 520': (r) => r.status === 520,
             'status is 521': (r) => r.status === 521,
-            'response time > 200ms': (r) => r.timings.duration > 100,
-            'response time < 100ms': (r) => r.timings.duration < 100,
-            'response time < 200ms': (r) => r.timings.duration < 200,
-            'response time < 500ms': (r) => r.timings.duration < 500,
-            'response time < 800ms': (r) => r.timings.duration < 800,
-            'response time < 1000ms': (r) => r.timings.duration < 1000,
-            'response time < 1200ms': (r) => r.timings.duration < 1200,
-            'response time < 1500ms': (r) => r.timings.duration < 1500,
-            'response time < 2000ms': (r) => r.timings.duration < 2000,
-            'response time < 2200ms': (r) => r.timings.duration < 2200,
-            'response time < 2500ms': (r) => r.timings.duration < 2500,
+            'status is 522': (r) => r.status === 522,
+            'response time < 1000ms': (r) => r.timings.duration < 1000
         });
 
         if (res.status !== 200) {
-            console.log("Login Failed API Response: " + res.status);
+            console.log("k12-course-service/api/v2/routine?program_id=142 > Status : " + res.status);
         }
         
 

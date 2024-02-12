@@ -28,11 +28,13 @@ export default function () {
             'status is 503': (r) => r.status === 503,
             'status is 500': (r) => r.status === 500,
             'status is 520': (r) => r.status === 520,
+            'status is 521': (r) => r.status === 521,
+            'status is 522': (r) => r.status === 522,
             'response time > 200ms': (r) => r.timings.duration > 100,
         });
 
         if (res.status !== 200) {
-            console.log("Login Failed API Response: " + res.status);
+            console.log("catalog-service/api/v2/plans/renewal-message Status : " + res.status);
         }
        
 
