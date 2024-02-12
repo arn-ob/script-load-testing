@@ -15,7 +15,7 @@ export default function () {
 
         let headers = {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYWQ2YjI4YWQyYTMwYTkzOGYzMzBiYiIsImlzX2FkbWluIjpmYWxzZSwiY29udGFjdCI6Iis4ODAxOTkxNzY4NDQ2IiwiZW1haWwiOiIiLCJsb2dpbl90eXBlIjoicGhvbmUiLCJsb2dpbl9zb3VyY2UiOiIxMG1pbnNjaG9vbCIsImxvZ2luX3RhcmdldCI6IiIsImxvZ2luX2FzIjowLCJuYW1lIjoiQXJub2IiLCJpc19hY3RpdmUiOmZhbHNlLCJ2ZXJpZmllZCI6dHJ1ZSwiZGV2aWNlX2lkIjoiNjVjNzk2ZTAwNGNlOGYyZDJkNmU0OTc3IiwiZGV2aWNlIjp7ImRldmljZV9pZCI6IjY1Yzc5NmUwMDRjZThmMmQyZDZlNDk3NyIsImRldmljZV9uYW1lIjoiQ2hyb21lIDEyMS4wLjAuMCIsImRldmljZV90eXBlIjoiYnJvd3NlciIsImRldmljZV9vcyI6IkludGVsIE1hYyBPUyBYIDEwXzE1XzciLCJvcmlnaW4iOiJodHRwczovL2FwcC1zdGFnZS4xMG1pbnV0ZXNjaG9vbC5uZXQiLCJpcF9hZGRyZXNzIjoiMTAzLjE0Ny4xMDcuNiJ9LCJ1c2VyX3N0YXR1cyI6IiIsImRhdGVfam9pbmVkIjoiMjAyMi0xMi0yOVQxMDoyNTo0NC40NjZaIiwidG9rZW5fdHlwZSI6ImFjY2VzcyIsImV4cCI6MTcwODI5OTEwNH0.yMTzCi_h0OaZ0xa-AR5gneLvSm2T0tUMIz5QCx9YtCs'
+            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDhkZGQzOTFjOTczMTE1YjcyN2I3ZCIsImlzX2FkbWluIjpmYWxzZSwiY29udGFjdCI6Iis4ODAxNTIxMjAwNDg4IiwiZW1haWwiOiJ0ZXN0QHRlc3Rlci5jb20iLCJsb2dpbl90eXBlIjoiZW1haWwiLCJsb2dpbl9zb3VyY2UiOiIxMG1pbnNjaG9vbCIsImxvZ2luX3RhcmdldCI6IiIsImxvZ2luX2FzIjowLCJuYW1lIjoiVGVzdCBBZ2FpbiIsImlzX2FjdGl2ZSI6ZmFsc2UsInZlcmlmaWVkIjp0cnVlLCJkZXZpY2VfaWQiOiI2NWMzNTE4YjY0NTEwNWU3OWRhYTkyYjciLCJkZXZpY2UiOnsiZGV2aWNlX2lkIjoiNjVjMzUxOGI2NDUxMDVlNzlkYWE5MmI3IiwiZGV2aWNlX25hbWUiOiJDaHJvbWUgMTIxLjAuMC4wIiwiZGV2aWNlX3R5cGUiOiJicm93c2VyIiwiZGV2aWNlX29zIjoiSW50ZWwgTWFjIE9TIFggMTBfMTVfNyIsIm9yaWdpbiI6Imh0dHBzOi8vYXBwLXN0YWdlLjEwbWludXRlc2Nob29sLm5ldCIsImlwX2FkZHJlc3MiOiIxNzUuNDEuNDUuMTk1In0sInVzZXJfc3RhdHVzIjoiIiwiZGF0ZV9qb2luZWQiOiIyMDIzLTAxLTMxVDA5OjIyOjI3LjMwN1oiLCJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA4MDE5MjExfQ.8iRJ9WEPiMD_GR7kmGxavb4mkn66WSmlz9zsCsUrgxk'
         }
 
         let res = http.get(`${baseUrl}/k12-course-service/api/v2/programs/custom-list?segment_id=7`, {
@@ -31,9 +31,9 @@ export default function () {
             'response time > 200ms': (r) => r.timings.duration > 100,
         });
 
-        if (res.status !== 200) {
-            console.log("Login Failed API Response: " + res.status);
-        }
+        // if (res.status !== 200) {
+        //     console.log("Login Failed API Response: " + res.status);
+        // }
        
 
         sleep(1);
