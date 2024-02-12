@@ -31,9 +31,9 @@ export default function () {
             'response time < 1000ms': (r) => r.timings.duration < 1000
         });
 
-        if (res.status !== 200) {
-            console.log("discovery-service/api/v1/taxonomies/products?vertical=skills > Status: " + res.status);
-        }
+        // if (res.status !== 200) {
+        //     console.log("discovery-service/api/v1/taxonomies/products?vertical=skills > Status: " + res.status);
+        // }
        
 
         sleep(2);

@@ -33,10 +33,9 @@ export default function () {
             'response time < 1000ms': (r) => r.timings.duration < 1000
         });
 
-        if (res.status !== 200) {
-            // file.appendString(failedResult, `Failed Login API Response,${JSON.stringify(loginRes.status)}\n`)
-            console.log("discovery-service/api/v1/taxonomies > Status : " + res.status);
-        }
+        // if (res.status !== 200) {
+        //     console.log("discovery-service/api/v1/taxonomies > Status : " + res.status);
+        // }
     
 
         sleep(2);

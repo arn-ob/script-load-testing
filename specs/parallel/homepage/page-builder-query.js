@@ -31,9 +31,9 @@ export default function () {
             'response time < 1000ms': (r) => r.timings.duration < 1000
         });
 
-        if (res.status !== 200) {
-            console.log("page-builder-service/query Status: " + res.status);
-        }
+        // if (res.status !== 200) {
+        //     console.log("page-builder-service/query Status: " + res.status);
+        // }
 
         sleep(1);
 }
