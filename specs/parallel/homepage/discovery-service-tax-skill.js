@@ -30,6 +30,8 @@ export default function () {
             'status is 503': (r) => r.status === 503,
             'status is 500': (r) => r.status === 500,
             'status is 520': (r) => r.status === 520,
+            'status is 521': (r) => r.status === 521,
+            'status is 522': (r) => r.status === 522,
             'response time < 1000ms': (r) => r.timings.duration < 1000
         });
 
