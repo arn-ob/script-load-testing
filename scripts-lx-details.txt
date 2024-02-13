@@ -1,1 +1,1 @@
-specs/parallel/lx-details/lx-details.js
+p
